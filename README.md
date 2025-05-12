@@ -1,57 +1,39 @@
-🧪 Usage
-Accessibility Check
+# SI5568 Accessibility Checker
 
-Select “Accessibility Check” in the sidebar.
+A Streamlit-based web application to audit web pages (or local HTML files) against the SI 5568 accessibility standard.  
+Runs a suite of automated checks and generates CSV/PDF reports and interactive charts (pie and bar) showing pass/fail results.
 
-Enter a web page URL or upload an .html file.
+---
 
-Click Start Check.
+## Features
 
-View metrics, tables, pie & bar charts.
+- **Automated Accessibility Checks**  
+  - HTML `<html lang>` attribute  
+  - `<title>` presence  
+  - Meta viewport  
+  - Skip links  
+  - ARIA landmarks  
+  - Empty link detection  
+  - Heading sequence  
+  - `<img alt>` presence  
+  - Video captions  
+  - Color contrast (WCAG 4.5:1)  
+  - Form labels  
+  - ARIA labels  
+  - Accessibility statement  
 
-Download CSV and PDF reports.
+- **Interactive Streamlit UI**  
+  - Enter a URL or upload a local HTML file  
+  - Sidebar navigation: “Accessibility Check”, “Show Standard” (embed PDF), “Search Clauses”  
+  - Charts: pass/fail pie chart and bar chart  
+  - Metrics: counts of passed vs failed checks  
+  - Downloadable CSV & PDF reports  
 
-Show Standard
+---
 
-Select “Show Standard” to view the embedded SI 5568 PDF.
+## 🛠️ Installation
 
-Search Clauses
-
-Select “Search Clauses” and type a keyword to filter the SI 5568 clause list.
-
-📂 Project Structure
-yaml
-Copy
-Edit
-.
-├── .venv/                         # Python virtual environment
-├── app.py                         # Main Streamlit application
-├── requirements.txt               # Python dependencies
-├── DejaVuSans.ttf                 # Unicode font for PDF generation
-├── IP5568/
-│   └── 5568.pdf                   # Official SI 5568 standard PDF
-└── README.md                      # This file
-⚙️ Configuration
-Page Settings:
-In app.py, st.set_page_config(page_title="SI5568 Accessibility Checker", layout="wide")
-
-Logging & Caching:
-The fetch & parse function is cached (@st.cache_data) to avoid repeated network calls during a session.
-
-🐛 Troubleshooting
-“WebDriver” errors:
-Ensure you’re using Selenium 4.6+ so that Selenium Manager can auto-download ChromeDriver.
-Make sure Google Chrome is installed and up to date.
-
-Font not found:
-Confirm DejaVuSans.ttf exists in the project root.
-
-Permission errors on Windows:
-If PowerShell blocks script execution, run:
-
-powershell
-Copy
-Edit
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-📜 License
-MIT License © 2025 Your Name
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/youruser/si5568-accessibility-checker.git
+   cd si5568-accessibility-checker
