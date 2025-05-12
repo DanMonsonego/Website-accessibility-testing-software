@@ -1,0 +1,18 @@
+# ── UI ─────────────────────────────
+streamlit==1.33.0
+pandas==2.2.2
+matplotlib==3.8.0
+
+# ── Scraping & עיבוד HTML ─────────
+selenium==4.20.0
+webdriver-manager==4.0.1
+beautifulsoup4==4.12.3
+lxml==5.2.1
+
+# ── PDF & דו״חות ────────────────────
+reportlab==4.0
+coloraide==4.6
+
+# ── RTL & BiDi ──────────────────────
+arabic-reshaper==3.0.0
+python-bidi==0.4.2

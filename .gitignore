@@ -1,0 +1,11 @@
+# Python artefacts
+__pycache__/
+*.py[cod]
+.venv/
+
+# IDE settings
+.idea/
+
+# Playwright / traces
+playwright-report/
+trace.zip
