@@ -369,8 +369,8 @@ def main():
         failed = df['סטטוס'].value_counts().get('⚠', 0)
 
         c1, c2 = st.columns(2)
-        c1.metric("עברו", passed)
-        c2.metric("נכשלו", failed)
+        c1.metric("✅", passed)
+        c2.metric("⚠", failed)
 
         with st.expander("הצג פרטים"):
             st.table(df)
@@ -378,7 +378,7 @@ def main():
         fig1, ax1 = plt.subplots()
         counts = df['סטטוס'].value_counts()
         ax1.pie(counts, labels=counts.index, autopct='%1.1f%%')
-        ax1.set_title("אחוזי עמידה בתקן")
+        ax1.set_title("Pass Vs Fail")
         st.pyplot(fig1)
 
         st.download_button("הורד CSV", df.to_csv(index=False), 'report.csv', 'text/csv')
